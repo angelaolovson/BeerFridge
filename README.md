@@ -16,13 +16,13 @@ New/Edit Page - enable to create and edit a beer.
 
 ## Code
 Models: Beer
-* Name: String,
-* Brewery: String,
-* Price: Number,
-* ABV: Number,
-* Type: String,
-* Ingredients: String,
-* Hops: String
+* name: String,
+* brewery: String,
+* price: Number,
+* abv: Number,
+* type: String,
+* notes: String,
+* hops: String
 
 ## User Stories
 * As a user, I will be able to click on each can.
