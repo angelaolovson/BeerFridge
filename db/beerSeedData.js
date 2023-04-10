@@ -6,7 +6,7 @@ module.exports = [
         abv: 12,
         type: "imperial milk stout",
         notes: "cacao, vanilla & sea salt",
-        hops
+        hops:""
     },
     {
         name: "SUPER CHANCE",
@@ -72,14 +72,13 @@ module.exports = [
         hops: "Citra, Amarillo Cryo, Idaho 7 and Strata"
         },
     
-    
     {
         name: "DDH Forever Ever",
         brewery: "OTHER HALF",
         price: 9,
         abv: 4.7,
         type: "Double Dry Hopped Session IPA",
-        notes,
+        notes:"",
         hops: "Mosaic, Azacca and Citra"
     },
     {
