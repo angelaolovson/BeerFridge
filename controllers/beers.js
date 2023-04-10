@@ -18,7 +18,11 @@ const seedBeers= async (req,res) => {
     await Beer.create(startBeers);
     res.redirect("/beers")
 };
-// //SHOW
+//SHOW
+const getBeerById = async (req,res) => {
+    const beer = await Beer.findById(req.params.id);
+    res.render("beers/show", {beer})
+}
 // const = (req,res) => {};
 // //CREATE 
 // const = (req,res) => {};
@@ -32,5 +36,6 @@ const seedBeers= async (req,res) => {
 module.exports = {
     getAllBeers,
     sendNewBeerForm,
-    seedBeers
+    seedBeers,
+    getBeerById
 }
