@@ -29,17 +29,30 @@ const postNewBeer = async (req,res) => {
     const beer = await Beer.create(req.body);
     res.redirect("/beers")
 };
-// //EDIT
-// const = (req,res) => {};
-// //UPDATE
-// const = (req,res) => {};
-// //DELETE
-// const = (req,res) => {};
+//EDIT
+const editBeerById = async (req,res) => {
+    const beer = await Beer.findById(req.params.id);
+    res.render("beers/edit", {beer})
+};
+//UPDATE
+const putBeerById = async (req,res) => {
+    const id = req.params.id
+    const beer = await Beer.findByIdAndUpdate(id, req.body);
+    res.redirect("/beers")
+};
+//DELETE
+const deleteBeerById = async (req,res) => {
+    const beer = await Beer.findByIdAndDelete(req.params.id);
+    res.redirect("/beers")
+};
 
 module.exports = {
     getAllBeers,
     sendNewBeerForm,
     seedBeers,
     getBeerById,
-    postNewBeer
+    postNewBeer,
+    editBeerById,
+    putBeerById,
+    deleteBeerById
 }
