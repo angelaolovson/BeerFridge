@@ -5,21 +5,38 @@
 }
 
 body {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-header {
- /* justify-content: center; */
- /* border: solid 2px gray; */
+main#eachBeer {
+    display: flex;
+    border: brown solid 3px;
+    height: 400px;
+    width: 800px;
 }
 
-
-
-main {
-    
-    
+#showImg {
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
 }
 
+#eachBeerInfo {
+    height: 400px;
+    width: 400px;
+    padding: 30px 0px 0px 40px;    
+}
+
+footer{
+    display: flex;
+    height: 30px;
+    width: 800px;
+    border: brown solid 3px;
+}
 
 
 

@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include("../partials/head.ejs") %>
     <title>Document</title>
 </head>
 <body>
-    <h1>Each Beer</h1>
-    <div>
-        <%=beer.name%>
-        <br>
-        $ <%=beer.price%>
-        <br>
-        <%=beer.type%> w/ <%=beer.notes%>;
-        <br>
-        Hopped with <%=beer.hops%>.
-        <br>
-        <%=beer.abv%>%
-        <br>
-    </div>
-    <a href="/beers/<%= beer._id %>/edit"><button>Edit</button></a>
-    <br>
-    <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete"/>
-    </form>
-    <br>
-    <a href="/beers/"><button>Back to Main</button></a>
+    <main id="eachBeer">
+        <div id="showImg">img</div>
+        <section id="eachBeerInfo">
+            <div id="beerName"><%=beer.name%></div>
+            <div id="beerPrice">$<%=beer.price%></div>
+            <div id="beerType">(<%=beer.abv%>%) <%=beer.type%> w/ <%=beer.notes%>; hopped with <%=beer.hops%>.</div>
+            <div id="editAndDeleteButtons">
+                <a href="/beers/<%= beer._id %>/edit"><button>Edit</button></a>
+                <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete"/>
+                </form>
+                <a href="/beers/"><button>Back to Main</button></a>
+            </div>           
+        </section>
+    </main>
 </body>
 </html>

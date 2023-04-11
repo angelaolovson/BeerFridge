@@ -63,7 +63,7 @@ module.exports = [
         hops: "Citra"
     }, 
     {
-        name: "Green Flowers",
+        name: "GREEN FLOWERS",
         brewery: "OTHER HALF",
         price: 10,
         abv:6.8,
