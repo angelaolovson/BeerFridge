@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
-const{getAllBeers, sendNewBeerForm, seedBeers, getBeerById} = require("../controllers/beers")
+const{getAllBeers, sendNewBeerForm, seedBeers, getBeerById, postNewBeer} = require("../controllers/beers")
 
 //==============ROUTES============================
 //INDEX 
@@ -17,8 +17,8 @@ router.get("/seed", seedBeers);
 //SHOW
 router.get("/:id", getBeerById);
 
-// //CREATE 
-// router.post("/", );
+//CREATE 
+router.post("/", postNewBeer);
 
 // //EDIT
 // router.get("/:id/edit", );

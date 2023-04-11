@@ -23,9 +23,12 @@ const getBeerById = async (req,res) => {
     const beer = await Beer.findById(req.params.id);
     res.render("beers/show", {beer})
 }
-// const = (req,res) => {};
-// //CREATE 
-// const = (req,res) => {};
+
+//CREATE 
+const postNewBeer = async (req,res) => {
+    const beer = await Beer.create(req.body);
+    res.redirect("/beers")
+};
 // //EDIT
 // const = (req,res) => {};
 // //UPDATE
@@ -37,5 +40,6 @@ module.exports = {
     getAllBeers,
     sendNewBeerForm,
     seedBeers,
-    getBeerById
+    getBeerById,
+    postNewBeer
 }
