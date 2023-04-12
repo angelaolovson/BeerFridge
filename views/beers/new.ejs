@@ -2,24 +2,56 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create your own beer</h1>
-    <form action="/beers" method="POST">
-        Name: <input type="text" name="name" />
-        <br/>
-        Brewery: <input type="text" name="brewery" />
-        <br/>
-        Price: <input type="number" name="price" />
-        <br/>
-        ABV: <input type="number" name="abv" />
-        <br/>
-        Type: <input type="text" name="type" />
-        <br/>
-        Notes: <input type="text" name="notes" />
-        <br/>
-        Hops: <input type="text" name="hops" />
-        <br/>
-        <br/>
-        <input type="submit" value="Create a Beer"/>
-    </form>
+    <main id="eachBeer">
+        <div id="showImg"></div>
+
+        <section id="eachBeerTag">
+            <form action="/beers" method="POST">
+
+                <div id="beerTextOnly">                
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Name</div>
+                        <div id="infoValueForm"><input type="text" name="name" placeholder="Name" /></div>
+                    </div>
+                    
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Brewery</div>
+                        <div id="infoValueForm"><input type="text" name="brewery" placeholder="Brewery" /></div>
+                    </div>
+
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Price $</div>
+                        <div id="infoValueForm"><input type="number" name="price" placeholder="Price" /></div>
+                    </div>
+                    
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Style</div>
+                        <div id="infoValueForm"><input type="text" name="style" placeholder="Style" /></div>
+                    </div>
+
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Hops</div>
+                        <div id="infoValueForm"><input type="text" name="hops" placeholder="Hops" /></div>
+                    </div>
+
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">Tasting Notes</div>
+                        <div id="infoValueForm"><input type="text" name="notes" placeholder="Tasting Notes" /></div>
+                    </div>
+
+                    <div id="infoItemForm">
+                        <div id="infoTitleForm">ABV %</div>
+                        <div id="infoValueForm"><input type="number" name="abv" placeholder="ABV" /></div>
+                    </div>  
+                    
+                </div>
+
+                <div id="buttons">
+                    <button type="submit" value="create">CREATE</button>
+                    <a href="/beers"><button>BACK</button></a>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
