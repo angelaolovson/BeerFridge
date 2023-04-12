@@ -4,6 +4,19 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "Freight Sans Light";
+    src: url(../font/Freight\ Sans\ Light.otf) format("opentype");
+}
+@font-face {
+    font-family: "Freight Sans Book";
+    src: url(../font/Freight\ Sans\ Book.otf) format("opentype");
+}
+@font-face {
+    font-family: "Freight Sans Medium";
+    src: url(../font/Freight\ Sans\ Medium.otf) format("opentype");
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,7 +27,7 @@ body {
 
 main#eachBeer {
     display: flex;
-    border: brown solid 3px;
+    /* border: brown solid 3px; */
     height: 400px;
     width: 800px;
 }
@@ -23,12 +36,77 @@ main#eachBeer {
     height: 400px;
     width: 400px;
     background-color: bisque;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-#eachBeerInfo {
+#eachBeerTag {
     height: 400px;
     width: 400px;
-    padding: 30px 0px 0px 40px;    
+    padding: 30px 10px 0px 40px;  
+    display: flex;
+    flex-direction: column;  
+}
+
+#beerName{
+    font-family:"Freight Sans Medium";
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 1000;
+    width: 350px;
+    letter-spacing: 0.5px;
+    word-spacing: 1.5px;
+}
+
+#beerPrice{
+    font-family:"Freight Sans Light";
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 350px;
+}
+
+#beerInfo{
+    display: flex;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    font-size: 14px;
+    width: 350px;
+    height: 160px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+#infoItem{
+    height: 80px;
+    width: 175px;
+    padding-right: 35px;
+}
+
+#infoTitle{
+    font-family:"Freight Sans Medium";
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#infoValue{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#buttons{
+    font-family:"Freight Sans Light";
+    display: flex;
+    height: 80px;
+    width: 350px;
+    font-size: 14px;
+    align-items: flex-end;
+}
+
+button{
+    margin-right: 25px;
+    height: 20px;
+    width: 55px;
 }
 
 footer{

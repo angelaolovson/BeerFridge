@@ -8,7 +8,7 @@ const beerSchema = new Schema({
     brewery: String,
     price: Number,
     abv: Number,
-    type: String,
+    style: String,
     notes: String,
     hops: String,
     canImg: String,

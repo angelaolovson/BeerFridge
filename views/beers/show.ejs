@@ -3,17 +3,34 @@
 </head>
 <body>
     <main id="eachBeer">
-        <div id="showImg">img</div>
-        <section id="eachBeerInfo">
+        <div id="showImg"><img src="<%=beer.showImg%>" width="400" height="400"></div>
+        <section id="eachBeerTag">
             <div id="beerName"><%=beer.name%></div>
             <div id="beerPrice">$<%=beer.price%></div>
-            <div id="beerType">(<%=beer.abv%>%) <%=beer.type%> w/ <%=beer.notes%>; hopped with <%=beer.hops%>.</div>
-            <div id="editAndDeleteButtons">
-                <a href="/beers/<%= beer._id %>/edit"><button>Edit</button></a>
+            <div id="beerInfo">
+                <div id="infoItem">
+                    <div id="infoTitle">Style</div>
+                    <div id="infoValue"><%=beer.style%></div>
+                </div>
+                <div id="infoItem">
+                    <div id="infoTitle">Hops</div>
+                    <div id="infoValue"><%=beer.hops%></div>
+                </div>
+                <div id="infoItem">
+                    <div id="infoTitle">Tasting Notes</div>
+                    <div id="infoValue"><%=beer.notes%></div>
+                </div>
+                <div id="infoItem">
+                    <div id="infoTitle">ABV</div>
+                    <div id="infoValue"><%=beer.abv%>%</div>
+                </div>  
+            </div> 
+            <div id="buttons">
+                <a href="/beers/<%= beer._id %>/edit"><button>EDIT</button></a>
                 <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete"/>
+                    <button type="submit" value="Delete">DELETE</button>
                 </form>
-                <a href="/beers/"><button>Back to Main</button></a>
+                <a href="/beers/"><button>BACK</button></a>
             </div>           
         </section>
     </main>
