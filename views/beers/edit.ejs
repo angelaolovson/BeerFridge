@@ -2,25 +2,54 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Edit <%=beer.name%></h1>
-    <form action="/beers/<%=beer._id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%= beer.name%>"/>
-        <br/>
-        Brewery: <input type="text" name="brewery" value="<%= beer.brewery%>" />
-        <br/>
-        Price: <input type="number" name="price" value="<%= beer.price%>" />
-        <br/>
-        ABV: <input type="number" name="abv" value="<%= beer.abv%>" />
-        <br/>
-        Type: <input type="text" name="type" value="<%= beer.type%>" />
-        <br/>
-        Notes: <input type="text" name="notes" value="<%= beer.notes%>" />
-        <br/>
-        Hops: <input type="text" name="hops" value="<%= beer.hops%>" />
-        <br/>
-        <br/>
-        <input type="submit" value="Update"/>
-    </form>
-    
+    <main id="eachBeer">
+        <div id="showImg"><img src="<%=beer.showImg%>" width="400" height="400">
+        </div>
+        <section id="eachBeerTag">      
+            <form action="/beers/<%=beer._id%>?_method=PUT" method="POST">
+                <div id="beerTextOnly">                
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Name</div>
+                    <div id="infoValueForm"><input type="text" name="name" value="<%= beer.name%>" /></div>
+                </div>
+                
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Brewery</div>
+                    <div id="infoValueForm"><input type="text" name="brewery" value="<%= beer.brewery%>" /></div>
+                </div>
+
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Price $</div>
+                    <div id="infoValueForm"><input type="number" name="price" value="<%= beer.price%>" /></div>
+                </div>
+                
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Style</div>
+                    <div id="infoValueForm"><input type="text" name="style" value="<%= beer.style%>" /></div>
+                </div>
+
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Hops</div>
+                    <div id="infoValueForm"><input type="text" name="hops" value="<%= beer.hops%>" /></div>
+                </div>
+
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">Tasting Notes</div>
+                    <div id="infoValueForm"><input type="text" name="notes" value="<%= beer.notes%>" /></div>
+                </div>
+
+                <div id="infoItemForm">
+                    <div id="infoTitleForm">ABV %</div>
+                    <div id="infoValueForm"><input type="number" name="abv" value="<%= beer.abv%>" /></div>
+                </div>  
+                </div>
+                
+                <div id="buttons">
+                    <button type="submit" value="Update">UPDATE</button>
+                    <a href="/beers/<%=beer._id%>"><button>BACK</button></a>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

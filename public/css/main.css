@@ -48,14 +48,25 @@ main#eachBeer {
     flex-direction: column;  
 }
 
+#beerTextOnly{
+    width: 350px;
+    height: 340px;
+}
 #beerName{
     font-family:"Freight Sans Medium";
-    margin-bottom: 15px;
+    margin-bottom: 7px;
     font-size: 20px;
     font-weight: 1000;
     width: 350px;
     letter-spacing: 0.5px;
     word-spacing: 1.5px;
+}
+
+#brewery{
+    font-family:"Freight Sans Light";
+    margin-bottom: 15px;
+    font-size: 15px;
+    width: 350px;
 }
 
 #beerPrice{
@@ -68,7 +79,6 @@ main#eachBeer {
 
 #beerInfo{
     display: flex;
-    font-family:'Times New Roman', Times, serif;
     margin-bottom: 15px;
     font-size: 14px;
     width: 350px;
@@ -92,15 +102,15 @@ main#eachBeer {
 #infoValue{
     font-size: 12px;
     line-height: 18px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 #buttons{
     font-family:"Freight Sans Light";
     display: flex;
-    height: 80px;
+    height: 30px;
     width: 350px;
     font-size: 14px;
-    align-items: flex-end;
 }
 
 button{
@@ -108,6 +118,24 @@ button{
     height: 20px;
     width: 55px;
 }
+
+/* Create and Edit page */
+#infoItemForm{
+    margin-bottom: 8px;
+}
+
+#infoTitleForm{
+    font-family:"Freight Sans Medium";
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+#infoValueForm{
+    font-size: 13px;
+    font-family:'Freight Sans Light';
+}
+
+
 
 footer{
     display: flex;
