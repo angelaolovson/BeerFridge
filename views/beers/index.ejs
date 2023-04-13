@@ -2,14 +2,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>beerssss</h1>
-    <div>
-        <% for (beer of beers) { %>
+    <main>
+        <div id="allBeerCan">
+            <% for (beer of beers) { %>
 
-            <a href="/beers/<%= beer._id%>"> <%= beer.name %> </a>
-            <br>
-        <% } %>
-    </div>
-    <div><a href="/beers/new"><button>Create a new beer</button></a></div>
+                <div id="eachBeerCan">
+
+                <a href="/beers/<%= beer._id%>"><img src="<%=beer.canImg%>" height="120"></a>
+                </div>
+
+            <% } %>
+        </div>
+        <a href="/beers/new"><button id="newButton">Create</button></a>
+    </main>
 </body>
 </html>

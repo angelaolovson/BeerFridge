@@ -25,15 +25,42 @@ body {
     height: 100vh;
 }
 
+/* Index */
+main{
+    height: 560px;
+    width: 400px;
+    background-image: url("../images/beerfridge.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+}
+
+#allBeerCan{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 460px;
+    width: 300px;
+    margin-top: 90px;
+    margin-left: 75px;
+}
+#eachBeerCan{
+    height: 120px;
+    width: 65px;
+}
+/* Show */
 main#eachBeer {
     display: flex;
     /* border: brown solid 3px; */
     height: 400px;
     width: 800px;
+    margin-top: 10px;
+    align-content: center;
 }
 
 #showImg {
-    height: 400px;
+    /* height: 400px; */
     width: 400px;
     background-color: bisque;
     background-repeat: no-repeat;
@@ -119,6 +146,16 @@ button{
     width: 55px;
 }
 
+#newButton{
+    font-family:"Freight Sans Light";
+    height: 20px;
+    width: 55px;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    left: 430px;
+}
+
 /* Create and Edit page */
 #infoItemForm{
     margin-bottom: 8px;
@@ -134,7 +171,6 @@ button{
     font-size: 13px;
     font-family:'Freight Sans Light';
 }
-
 
 
 footer{
