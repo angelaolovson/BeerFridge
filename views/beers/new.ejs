@@ -2,11 +2,16 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="/beers" method="POST">
     <main id="eachBeer">
-        <div id="showImg"></div>
+        <div id="showImg">
+            <div class="imageForm">
+                <div class="imageTitleForm">Image</div>
+                <div class="imageValueForm"><input type="text" name="canLabel" placeholder="URL" /></div>
+            </div>
+        </div>
 
         <section id="eachBeerTag">
-            <form action="/beers" method="POST">
 
                 <div id="beerTextOnly">                
                     <div id="infoItemForm">
@@ -50,8 +55,8 @@
                     <button type="submit" value="create">CREATE</button>
                     <a href="/beers"><button>BACK</button></a>
                 </div>
-            </form>
-        </section>
-    </main>
+            </section>
+        </main>
+    </form>
 </body>
 </html>

@@ -42,13 +42,29 @@ main{
     flex-wrap: wrap;
     height: 460px;
     width: 300px;
-    margin-top: 90px;
-    margin-left: 75px;
+    margin-top: 50px;
+    margin-left: 55px;
+    gap: 10px;
 }
-#eachBeerCan{
+.eachBeerCan{
     height: 120px;
     width: 65px;
+    margin-bottom: 50px;
+    background-image: url("../images/can.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
 }
+
+.eachBeerCanLabel{
+    height: 95.5px;
+    width: 49px;
+    z-index: 2;
+    position: absolute;
+    top: 15px;
+    left: 00px;
+}
+
 /* Show */
 main#eachBeer {
     display: flex;
@@ -60,11 +76,14 @@ main#eachBeer {
 }
 
 #showImg {
-    /* height: 400px; */
+    height: 400px;
     width: 400px;
-    background-color: bisque;
+    background-color: rgb(226, 220, 212);
     background-repeat: no-repeat;
     background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #eachBeerTag {
@@ -168,6 +187,23 @@ button{
 }
 
 #infoValueForm{
+    font-size: 13px;
+    font-family:'Freight Sans Light';
+}
+
+.imageForm{
+    margin-bottom: 8px;
+    height: 50px;
+    width: 150px;
+}
+
+.imageTitleForm{
+    font-family:"Freight Sans Medium";
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.imageValueForm{
     font-size: 13px;
     font-family:'Freight Sans Light';
 }

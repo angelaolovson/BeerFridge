@@ -12,7 +12,8 @@ const beerSchema = new Schema({
     notes: String,
     hops: String,
     canImg: String,
-    showImg: String
+    showImg: String,
+    canLabel: String
 })
 
 const Beer = mongoose.model("Beer", beerSchema);

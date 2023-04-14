@@ -1,14 +1,19 @@
 <%- include("../partials/head.ejs") %>
-    <title>Document</title>
+    <title>Beer Fridge</title>
 </head>
 <body>
     <main>
         <div id="allBeerCan">
             <% for (beer of beers) { %>
 
-                <div id="eachBeerCan">
+                <div class="eachBeerCan">
 
                 <a href="/beers/<%= beer._id%>"><img src="<%=beer.canImg%>" height="120"></a>
+                        
+                    <div class="eachBeerCanLabel">
+                        <a href="/beers/<%= beer._id%>"><img src="<%=beer.canLabel%>" width="49px"></a>
+                    </div>    
+                    
                 </div>
 
             <% } %>
