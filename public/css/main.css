@@ -32,24 +32,31 @@ main{
     background-image: url("../images/beerfridge.png");
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #allBeerCan{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    height: 460px;
-    width: 300px;
-    margin-top: 50px;
-    margin-left: 55px;
-    gap: 10px;
+    flex-wrap: wrap; */
+    height: 440px;
+    width: 260px;
+    background-color: pink;
+    opacity: 0.7;
+
+    display: grid;
+    grid-template-columns: repeat(4, 50.5px [col-start]);
+    grid-template-rows: [row1-start] 120px [row1-end] 75px [third-line] 120px [last-line];
+
+    column-gap: 19.3px;
+    row-gap: 65px;
+
 }
 .eachBeerCan{
     height: 120px;
-    width: 65px;
-    margin-bottom: 50px;
+    width: 50.5px;
     background-image: url("../images/can.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -59,10 +66,9 @@ main{
 .eachBeerCanLabel{
     height: 95.5px;
     width: 49px;
-    z-index: 2;
     position: absolute;
     top: 15px;
-    left: 00px;
+    left: 0px;
 }
 
 /* Show */
@@ -171,8 +177,8 @@ button{
     width: 55px;
     font-size: 14px;
     position: absolute;
-    top: 20px;
-    left: 430px;
+    top: 70px;
+    left: 730px;
 }
 
 /* Create and Edit page */

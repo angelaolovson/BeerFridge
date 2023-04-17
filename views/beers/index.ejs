@@ -4,17 +4,20 @@
 <body>
     <main>
         <div id="allBeerCan">
-            <% for (beer of beers) { %>
+            <% for (let i=0; i<beers.length; i++) { %>
 
-                <div class="eachBeerCan">
+                <a class="eachBeerCan" href="/beers/<%= beers[i]._id%>">
 
-                <a href="/beers/<%= beer._id%>"><img src="<%=beer.canImg%>" height="120"></a>
-                        
-                    <div class="eachBeerCanLabel">
-                        <a href="/beers/<%= beer._id%>"><img src="<%=beer.canLabel%>" width="49px"></a>
-                    </div>    
+                    <div class="eachBeerCan">
+
+                        <img src="<%=beers[i].canImg%>" height="120">
+                            
+                        <div class="eachBeerCanLabel">
+                            <img src="<%=beers[i].canLabel%>" width="49px">
+                        </div>    
                     
-                </div>
+                    </div>
+                </a>
 
             <% } %>
         </div>

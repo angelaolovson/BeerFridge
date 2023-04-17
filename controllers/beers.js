@@ -21,6 +21,7 @@ const seedBeers= async (req,res) => {
 //SHOW
 const getBeerById = async (req,res) => {
     const beer = await Beer.findById(req.params.id);
+    beer.img = beer.showImg || beer.canLabel
     res.render("beers/show", {beer})
 }
 
