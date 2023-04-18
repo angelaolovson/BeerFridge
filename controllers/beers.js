@@ -5,7 +5,9 @@ const startBeers = require("../db/beerSeedData")
 //INDEX
 const getAllBeers = async (req, res) => {
 	const beers = await Beer.find({});
-	res.render("beers/index.ejs" , {beers});
+    const beersLength = beers.length
+	res.render("beers/index.ejs" , {beers: beers, hideNewButton: beersLength >11 });
+    //If hideNewButton is true(>11), the "newButton" won't be rendered.
 };
 
 //NEW

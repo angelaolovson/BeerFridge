@@ -6,7 +6,7 @@
         <div id="allBeerCan">
             <% for (let i=0; i<beers.length; i++) { %>
 
-                <a class="eachBeerCan" href="/beers/<%= beers[i]._id%>">
+                <a class="eachBeerCan" draggable="true" href="/beers/<%= beers[i]._id%>">
 
                     <div class="eachBeerCan">
 
@@ -20,8 +20,17 @@
                 </a>
 
             <% } %>
+            <div >
+                <% if(!hideNewButton) { %>
+                   
+                    <button id="newButton" onclick = "window.location.href='http://localhost:3000/beers/new';">Create</button>
+
+                    <% } %>
+            </div>
+            
+            
         </div>
-        <a href="/beers/new"><button id="newButton">Create</button></a>
     </main>
+
 </body>
 </html>

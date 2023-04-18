@@ -43,8 +43,6 @@ main{
     flex-wrap: wrap; */
     height: 440px;
     width: 260px;
-    background-color: pink;
-    opacity: 0.7;
 
     display: grid;
     grid-template-columns: repeat(4, 50.5px [col-start]);
@@ -52,6 +50,8 @@ main{
 
     column-gap: 19.3px;
     row-gap: 65px;
+
+    position: relative;
 
 }
 .eachBeerCan{
@@ -70,6 +70,10 @@ main{
     top: 15px;
     left: 0px;
 }
+
+.dragging {
+    opacity: 0.8;
+  }
 
 /* Show */
 main#eachBeer {
@@ -98,6 +102,7 @@ main#eachBeer {
     padding: 30px 10px 0px 40px;  
     display: flex;
     flex-direction: column;  
+    position: relative;
 }
 
 #beerTextOnly{
@@ -171,14 +176,22 @@ button{
     width: 55px;
 }
 
+#backButton{
+    font-family:"Freight Sans Light";
+    position: absolute;
+    top: 370px;
+    left: 120px;
+    font-size: 14px;
+}
+
 #newButton{
     font-family:"Freight Sans Light";
     height: 20px;
     width: 55px;
     font-size: 14px;
     position: absolute;
-    top: 70px;
-    left: 730px;
+    top: -30px;
+    left: 350px;
 }
 
 /* Create and Edit page */
