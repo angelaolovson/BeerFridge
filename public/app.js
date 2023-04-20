@@ -1,3 +1,30 @@
+// Get the modal element
+const modal = document.getElementById('age-verification-modal');
+
+// Get the buttons inside the modal
+const yesButton = document.getElementById('yes-button');
+const noButton = document.getElementById('no-button');
+
+// Check if the user has already verified their age
+const verified = localStorage.getItem('age-verified');
+
+// Show the modal if the user has not yet verified their age
+if (!verified) {
+  modal.style.display = 'block';
+}
+
+// Hide the modal and set the age verification status to true when the Yes button is clicked
+yesButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+  localStorage.setItem('age-verified', true);
+});
+
+// Redirect to a different page when the No button is clicked
+noButton.addEventListener('click', function() {
+  window.location.href = 'https://www.google.com';
+});
+
+
 const draggbles = document.querySelectorAll(".shallow-draggable")
 const containers = document.querySelectorAll("#allBeerCan")
 
