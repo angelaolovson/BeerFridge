@@ -38,20 +38,15 @@ main{
 }
 
 #allBeerCan{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
     height: 440px;
     width: 260px;
-
     display: grid;
     grid-template-columns: repeat(4, 50.5px [col-start]);
     grid-template-rows: [row1-start] 120px [row1-end] 75px [third-line] 120px [last-line];
-
     column-gap: 19.3px;
     row-gap: 65px;
-
     position: relative;
+    transition: opacity 200ms ease;
 
 }
 .eachBeerCan{
@@ -73,6 +68,7 @@ main{
 
 .dragging {
     opacity: 0.8;
+    transition: opacity 1s ease;
   }
 
 /* Show */
@@ -234,6 +230,7 @@ footer{
     width: 800px;
     border: brown solid 3px;
 }
+
 
 
 
