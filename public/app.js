@@ -1,5 +1,5 @@
 const draggbles = document.querySelectorAll(".shallow-draggable")
-const containers = document.querySelectorAll(".draggable-container")
+const containers = document.querySelectorAll("#allBeerCan")
 
 draggbles.forEach((draggble) => {
   //for start dragging costing opacity
