@@ -1,6 +1,8 @@
 # Beer Fridge
 A craft beer fridge in my kitchen with variety of beers from awesome breweries. You can drink it(delete it), restock the fridge(add new beer), and edit the content.
 
+https://beerfridge.onrender.com/beers
+
 ## Wireframe
 Index Page - show all the beers.
 
