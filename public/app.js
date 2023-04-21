@@ -1,3 +1,5 @@
+const { beerGallary } = require("../controllers/beers");
+
 // Get the modal element
 const modal = document.getElementById('age-verification-modal');
 
@@ -21,7 +23,7 @@ yesButton.addEventListener('click', function() {
 
 // Redirect to a different page when the No button is clicked
 noButton.addEventListener('click', function() {
-  window.location.href = 'http://localhost:3000/beers/gallary';
+  window.location.href = beerGallary;
 });
 
 
