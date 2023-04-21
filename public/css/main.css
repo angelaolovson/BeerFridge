@@ -267,7 +267,7 @@ h2{
     color: white;
 }
 
-#beerGallary{
+#beerGallery{
     width: 700px;
     margin-top: 200px;
     display: flex;
@@ -275,7 +275,7 @@ h2{
     justify-content: center;
 }
 
-#gallaryImg{
+#galleryImg{
     margin: 10px;
 }
 

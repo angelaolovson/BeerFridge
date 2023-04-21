@@ -16,9 +16,9 @@ const sendNewBeerForm = (req,res) => {
 };
 
 //AGE
-const beerGallary = async(req,res) => {
+const beerGallery = async(req,res) => {
     const beers = await Beer.find({});
-    res.render("beers/gallary", {beers})
+    res.render("beers/gallery", {beers})
 };
 
 
@@ -37,7 +37,12 @@ const getBeerById = async (req,res) => {
 
 //CREATE 
 const postNewBeer = async (req,res) => {
-    const beer = await Beer.create(req.body);
+    console.log(req.body)
+    const {canLabel,name,brewery,price,style,hops,notes,abv} = req.body;
+    const newBeer = {canLabel,name,brewery,price,style,hops,notes,abv,showImg:req.body.showImg || canLabel};
+    // newBeer.showImg = req.body.showImg ? req.body.showImg : canLabel;
+    console.log(newBeer)
+    const beer = await Beer.create(newBeer);
     res.redirect("/beers")
 };
 //EDIT
@@ -66,5 +71,5 @@ module.exports = {
     editBeerById,
     putBeerById,
     deleteBeerById,
-    beerGallary
+    beerGallery
 }

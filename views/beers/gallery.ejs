@@ -1,0 +1,13 @@
+<%- include("../partials/head.ejs") %>
+    <title>Beer Gallery</title>
+    <% console.log(beers)%>
+</head>
+<body>
+    <div id="beerGallery">
+        <% for (let i=0; i<beers.length; i++) { %>
+            <img src="<%=beers[i].showImg%>" width="200px" height="200px" id="galleryImg">
+            <% } %>
+    </div>
+
+</body>
+</html>
