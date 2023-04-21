@@ -21,7 +21,7 @@ yesButton.addEventListener('click', function() {
 
 // Redirect to a different page when the No button is clicked
 noButton.addEventListener('click', function() {
-  window.location.href = 'https://www.google.com';
+  window.location.href = 'http://localhost:3000/beers/gallary';
 });
 
 

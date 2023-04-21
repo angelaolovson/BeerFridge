@@ -14,6 +14,14 @@ const getAllBeers = async (req, res) => {
 const sendNewBeerForm = (req,res) => {
     res.render("beers/new")
 };
+
+//AGE
+const beerGallary = async(req,res) => {
+    const beers = await Beer.find({});
+    res.render("beers/gallary", {beers})
+};
+
+
 //Seed
 const seedBeers= async (req,res) => {
     await Beer.deleteMany({});
@@ -57,5 +65,6 @@ module.exports = {
     postNewBeer,
     editBeerById,
     putBeerById,
-    deleteBeerById
+    deleteBeerById,
+    beerGallary
 }
