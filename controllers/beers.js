@@ -37,11 +37,9 @@ const getBeerById = async (req,res) => {
 
 //CREATE 
 const postNewBeer = async (req,res) => {
-    console.log(req.body)
     const {canLabel,name,brewery,price,style,hops,notes,abv} = req.body;
     const newBeer = {canLabel,name,brewery,price,style,hops,notes,abv,showImg:req.body.showImg || canLabel};
     // newBeer.showImg = req.body.showImg ? req.body.showImg : canLabel;
-    console.log(newBeer)
     const beer = await Beer.create(newBeer);
     res.redirect("/beers")
 };
